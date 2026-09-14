@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import {
     MenuFoldOutlined,
     MenuUnfoldOutlined,
@@ -9,7 +9,7 @@ import { navMenuConfig } from '../../constants/menuConfig';
 
 const { Header, Sider, Content } = Layout;
 
-const App = () => {
+const MasterLayout = () => {
     const [collapsed, setCollapsed] = useState(false);
     const navigate = useNavigate();
     const location = useLocation();
@@ -59,4 +59,4 @@ const App = () => {
     );
 };
 
-export default App;
+export default MasterLayout;
