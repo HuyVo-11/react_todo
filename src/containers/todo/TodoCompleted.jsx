@@ -1,4 +1,5 @@
 import './TodoShared.scss';
+import { TodoContext } from './index';
 
 const TodoCompleted = () => {
     return (
