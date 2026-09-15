@@ -7,7 +7,7 @@ import AppRoutes from './routes/AppRoutes';
 
 function App() {
   return (
-    <TodoProvider>
+    <TodoProvider> {/* bọc ngoài cùng để tất cả component có thể lấy dữ liệu */}
       <BrowserRouter>
         <AppRoutes />
       </BrowserRouter>
