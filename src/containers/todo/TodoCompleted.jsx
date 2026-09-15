@@ -1,17 +1,17 @@
 import { useContext } from 'react';
-import { List, Typography } from 'antd';
+import { List, Typography, Button } from 'antd';
 import { TodoContext } from './index';
 import './TodoShared.scss';
 
 const { Title } = Typography;
 
 const TodoCompleted = () => {
-    const { tasks } = useContext(TodoContext);
-    const completedTasks = tasks.filter(task => task.completed === true);
+    const { tasks, toggleTask } = useContext(TodoContext);
+    const completedTasks = tasks.filter(task => task.completed === true); // lọc task đã complete 
 
     return (
         <div className='todo-container'>
-            <Title level={2}>Priority Tasks</Title>
+            <Title level={2}>Completed Tasks</Title>
             <List
                 bordered
                 dataSource={completedTasks}
@@ -22,6 +22,13 @@ const TodoCompleted = () => {
                         <span className="list-item-title">
                             {item.title}
                         </span>
+
+                        <Button
+                            type="primary"
+                            danger
+                            onClick={() => toggleTask(item.id)}>
+                            Undo
+                        </Button>
                     </List.Item>
                 )}
 

@@ -13,12 +13,14 @@ const { Title } = Typography; //lấy title từ typography
 
 const AllTodo = () => {
     const { tasks, toggleTask, togglePriority } = useContext(TodoContext);
+    const unmarkTask = tasks.filter(task => task.completed === false && task.priority === false);
+
     return (
         <div className="todo-container">
             <Title level={2}> React Roadmap</Title>
             <List
                 bordered
-                dataSource={tasks}
+                dataSource={unmarkTask}
 
                 header={
                     <div className="list-header-container">
@@ -44,7 +46,6 @@ const AllTodo = () => {
                                 onChange={() => toggleTask(item.id)}
                             //className={item.completed ? 'todo-item-completed' : 'todo-item-active'}
                             >
-
                             </Checkbox>
 
                             <Checkbox
