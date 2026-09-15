@@ -1,0 +1,53 @@
+.todo-container {
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.todo-item-completed {
+  text-decoration: line-through;
+  color: #999;
+}
+
+.todo-item-active {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* CSS cho phần Header của List */
+.list-header-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 16px;
+}
+
+.list-header-title {
+  flex: 1;
+  font-weight: bold;
+}
+
+.list-header-labels {
+  display: flex;
+  gap: 20px;
+  width: 150px;
+  justify-content: center;
+}
+
+/* CSS cho từng dòng (Item) của List */
+.list-item-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.list-item-title {
+  flex: 1;
+}
+
+.list-item-actions {
+  display: flex;
+  gap: 60px;
+  /* Chỉnh khoảng cách 2 nút tick ở đây */
+  width: 150px;
+  justify-content: center;
+}

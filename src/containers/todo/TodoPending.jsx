@@ -1,9 +1,9 @@
-import React from 'react';
+import './TodoShared.scss';
 
 const todoPending = () => {
     return (
         <div>
-            cv cần làm
+            Priority
         </div>
     );
 };

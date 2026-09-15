@@ -1,4 +1,4 @@
-import React from 'react';
+import './TodoShared.scss';
 
 const TodoCompleted = () => {
     return (
